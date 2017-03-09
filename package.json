@@ -14,6 +14,10 @@
     "secure",
     "node"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/volem/secure-callback"
+  },
   "author": "volem",
   "license": "MIT",
   "devDependencies": {
