@@ -31,3 +31,4 @@ var SecureCallback = (function () {
     return SecureCallback;
 }());
 module.exports = SecureCallback;
+//# sourceMappingURL=securecallback.js.map
