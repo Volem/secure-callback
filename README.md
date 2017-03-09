@@ -1,4 +1,5 @@
-# secure-callback
+# secure-callback [![Build Status](https://travis-ci.org/Volem/secure-callback.svg?branch=master)](https://travis-ci.org/Volem/secure-callback)  
+
 We all check that the callback function is available and if we forget to check we may end up strange errors. So how do we check? Let me write quickly, I believe you will remember :)
 ``` javascript
 if (callback) {
