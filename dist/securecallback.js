@@ -28,6 +28,22 @@ var SecureCallback = (function () {
             throw new Error(this.callbackRequiredMsg);
         }
     };
+    SecureCallback.prototype.respondsuccess = function (callback, successMsg) {
+        if (successMsg === void 0) { successMsg = null; }
+        var args = [];
+        for (var _i = 2; _i < arguments.length; _i++) {
+            args[_i - 2] = arguments[_i];
+        }
+        this.respond(callback, null, successMsg, args);
+    };
+    SecureCallback.prototype.responderror = function (callback, errorMsg) {
+        if (errorMsg === void 0) { errorMsg = null; }
+        var args = [];
+        for (var _i = 2; _i < arguments.length; _i++) {
+            args[_i - 2] = arguments[_i];
+        }
+        this.respond(callback, errorMsg, args);
+    };
     return SecureCallback;
 }());
 module.exports = SecureCallback;
