@@ -20,8 +20,7 @@ class SecureCallback {
 			} else if (this.throwException) {
 				throw new Error(this.notFunctionMsg);
 			}
-		}
-		if (this.throwException) {
+		} else if (this.throwException) {
 			throw new Error(this.callbackRequiredMsg);
 		}
 	}

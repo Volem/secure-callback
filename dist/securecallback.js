@@ -24,7 +24,7 @@ var SecureCallback = (function () {
                 throw new Error(this.notFunctionMsg);
             }
         }
-        if (this.throwException) {
+        else if (this.throwException) {
             throw new Error(this.callbackRequiredMsg);
         }
     };

@@ -1,8 +1,8 @@
 {
   "name": "secure-callback",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Checks callback functions validity",
-  "main": "index.js",
+  "main": "dist/securecallback.js",
   "scripts": {
     "test": "mocha",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha test/test.js",
