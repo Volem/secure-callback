@@ -5,6 +5,9 @@
 /*~ This declaration specifies that the class constructor function
  *~ is the exported object from the file
  */
+
+/// <reference types="typescript" />
+
 export = SecureCallback;
 
 declare class SecureCallback {
