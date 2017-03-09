@@ -1,0 +1,33 @@
+"use strict";
+function isFunction(object) {
+    return typeof (object) === 'function';
+}
+var SecureCallback = (function () {
+    function SecureCallback(throwException, notFunctionMsg, callbackRequiredMsg) {
+        if (throwException === void 0) { throwException = false; }
+        if (notFunctionMsg === void 0) { notFunctionMsg = null; }
+        if (callbackRequiredMsg === void 0) { callbackRequiredMsg = null; }
+        this.throwException = throwException ? throwException : false;
+        this.notFunctionMsg = notFunctionMsg ? notFunctionMsg : 'callback is not a function.';
+        this.callbackRequiredMsg = callbackRequiredMsg ? callbackRequiredMsg : 'callback should be defined.';
+    }
+    SecureCallback.prototype.respond = function (callback) {
+        var args = [];
+        for (var _i = 1; _i < arguments.length; _i++) {
+            args[_i - 1] = arguments[_i];
+        }
+        if (callback) {
+            if (isFunction(callback)) {
+                callback(args);
+            }
+            else if (this.throwException) {
+                throw new Error(this.notFunctionMsg);
+            }
+        }
+        if (this.throwException) {
+            throw new Error(this.callbackRequiredMsg);
+        }
+    };
+    return SecureCallback;
+}());
+module.exports = SecureCallback;
