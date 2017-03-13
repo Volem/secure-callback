@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 function isFunction(object) {
     return typeof (object) === 'function';
 }
@@ -46,4 +47,4 @@ var SecureCallback = (function () {
     };
     return SecureCallback;
 }());
-module.exports = SecureCallback;
+exports.SecureCallback = SecureCallback;
