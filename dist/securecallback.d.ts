@@ -5,15 +5,13 @@
 /*~ This declaration specifies that the class constructor function
  *~ is the exported object from the file
  */
-export = SecureCallback;
+declare class SecureCallback {
+    constructor(throwException?: Boolean, notFunctionMsg?: string, callbackRequiredMsg?: string);
 
-export module SecureCallback {
-    declare class SecureCallback {
-        constructor(throwException?: Boolean, notFunctionMsg?: string, callbackRequiredMsg?: string);
-
-        respond(callback: Function, ...args): void;
-        respondsuccess(callback: Function, successMsg?: string, ...args): void;
-        responderror(callback: Function, errorMsg?: string, ...args): void;
-    }
+    respond(callback: Function, ...args): void;
+    respondsuccess(callback: Function, successMsg?: string, ...args): void;
+    responderror(callback: Function, errorMsg?: string, ...args): void;
 }
+
+export module SecureCallback{}
 

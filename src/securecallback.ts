@@ -2,7 +2,7 @@ function isFunction(object) {
 	return typeof (object) === 'function';
 }
 
-class SecureCallback {
+export = class SecureCallback {
 	throwException: Boolean;
 	notFunctionMsg: string;
 	callbackRequiredMsg: string;

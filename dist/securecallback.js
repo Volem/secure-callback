@@ -1,7 +1,8 @@
+"use strict";
 function isFunction(object) {
     return typeof (object) === 'function';
 }
-var SecureCallback = (function () {
+module.exports = (function () {
     function SecureCallback(throwException, notFunctionMsg, callbackRequiredMsg) {
         if (throwException === void 0) { throwException = false; }
         if (notFunctionMsg === void 0) { notFunctionMsg = null; }
