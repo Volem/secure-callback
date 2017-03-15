@@ -8,9 +8,9 @@ export = class SecureCallback {
 	callbackRequiredMsg: string;
 
 	constructor(throwException: Boolean = false, notFunctionMsg: string = null, callbackRequiredMsg: string = null) {
-		this.throwException = throwException ? throwException : false;
-		this.notFunctionMsg = notFunctionMsg ? notFunctionMsg : 'callback is not a function.';
-		this.callbackRequiredMsg = callbackRequiredMsg ? callbackRequiredMsg : 'callback should be defined.';
+		this.throwException = throwException || false;
+		this.notFunctionMsg = notFunctionMsg || 'callback is not a function.';
+		this.callbackRequiredMsg = callbackRequiredMsg || 'callback should be defined.';
 	}
 
 	respond(callback: Function, ...args) {
