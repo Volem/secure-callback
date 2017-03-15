@@ -8,7 +8,8 @@
     "test": "mocha",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha test/test.js",
     "build": "npm run build:live",
-    "build:live": "tsc"
+    "build:live": "tsc",
+    "testlocal": "standard dist/*.js && mocha"
   },
   "keywords": [
     "callback",
