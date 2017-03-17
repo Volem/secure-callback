@@ -17,6 +17,12 @@ describe('secureCallback', function () {
 				scDefault.respondsuccess(function(){
 					return;
 				}, 'success message', 'success message 2');
+				scDefault.responderror(function(){
+					return;
+				});
+				scDefault.respondsuccess(function(){
+					return;
+				});
 			}, Error)
 		});
 	});

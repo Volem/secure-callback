@@ -7,9 +7,9 @@ module.exports = (function () {
         if (throwException === void 0) { throwException = false; }
         if (notFunctionMsg === void 0) { notFunctionMsg = null; }
         if (callbackRequiredMsg === void 0) { callbackRequiredMsg = null; }
-        this.throwException = throwException ? throwException : false;
-        this.notFunctionMsg = notFunctionMsg ? notFunctionMsg : 'callback is not a function.';
-        this.callbackRequiredMsg = callbackRequiredMsg ? callbackRequiredMsg : 'callback should be defined.';
+        this.throwException = throwException || false;
+        this.notFunctionMsg = notFunctionMsg || 'callback is not a function.';
+        this.callbackRequiredMsg = callbackRequiredMsg || 'callback should be defined.';
     }
     SecureCallback.prototype.respond = function (callback) {
         var args = [];
