@@ -24,10 +24,6 @@ class SecureCallback {
 			throw new Error(this.callbackRequiredMsg);
 		}
 	}
-
-	respondsuccess(callback: Function, ...args) {
-		this.respond(callback, null, args);
-	}
 }
 
 export = SecureCallback;

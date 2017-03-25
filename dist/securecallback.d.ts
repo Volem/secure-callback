@@ -9,11 +9,10 @@
 export = SC.SecureCallback
 
 declare module SC {
-    declare class SecureCallback {
+    class SecureCallback {
         constructor(throwException?: Boolean, notFunctionMsg?: string, callbackRequiredMsg?: string);
 
         respond(callback: Function, ...args): void;
-        respondsuccess(callback: Function, ...args): void;
     }
 }
 
