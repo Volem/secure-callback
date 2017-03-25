@@ -2,7 +2,7 @@
 function isFunction(object) {
     return typeof (object) === 'function';
 }
-module.exports = (function () {
+var SecureCallback = (function () {
     function SecureCallback(throwException, notFunctionMsg, callbackRequiredMsg) {
         if (throwException === void 0) { throwException = false; }
         if (notFunctionMsg === void 0) { notFunctionMsg = null; }
