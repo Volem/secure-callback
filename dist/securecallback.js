@@ -7,9 +7,9 @@ var SecureCallback = (function () {
         if (throwException === void 0) { throwException = false; }
         if (notFunctionMsg === void 0) { notFunctionMsg = null; }
         if (callbackRequiredMsg === void 0) { callbackRequiredMsg = null; }
-        this.throwException = throwException ? throwException : false;
-        this.notFunctionMsg = notFunctionMsg ? notFunctionMsg : 'callback is not a function.';
-        this.callbackRequiredMsg = callbackRequiredMsg ? callbackRequiredMsg : 'callback should be defined.';
+        this.throwException = throwException || false;
+        this.notFunctionMsg = notFunctionMsg || 'callback is not a function.';
+        this.callbackRequiredMsg = callbackRequiredMsg || 'callback should be defined.';
     }
     SecureCallback.prototype.respond = function (callback) {
         var args = [];
@@ -28,21 +28,12 @@ var SecureCallback = (function () {
             throw new Error(this.callbackRequiredMsg);
         }
     };
-    SecureCallback.prototype.respondsuccess = function (callback, successMsg) {
-        if (successMsg === void 0) { successMsg = null; }
+    SecureCallback.prototype.respondsuccess = function (callback) {
         var args = [];
-        for (var _i = 2; _i < arguments.length; _i++) {
-            args[_i - 2] = arguments[_i];
+        for (var _i = 1; _i < arguments.length; _i++) {
+            args[_i - 1] = arguments[_i];
         }
-        this.respond(callback, null, successMsg, args);
-    };
-    SecureCallback.prototype.responderror = function (callback, errorMsg) {
-        if (errorMsg === void 0) { errorMsg = null; }
-        var args = [];
-        for (var _i = 2; _i < arguments.length; _i++) {
-            args[_i - 2] = arguments[_i];
-        }
-        this.respond(callback, errorMsg, args);
+        this.respond(callback, null, args);
     };
     return SecureCallback;
 }());
