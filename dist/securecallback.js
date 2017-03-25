@@ -18,7 +18,7 @@ var SecureCallback = (function () {
         }
         if (callback) {
             if (isFunction(callback)) {
-                callback.apply(args.slice());
+                callback.apply(this, args);
             }
             else if (this.throwException) {
                 throw new Error(this.notFunctionMsg);
