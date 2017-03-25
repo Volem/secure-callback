@@ -2,7 +2,7 @@ function isFunction(object) {
 	return typeof (object) === 'function';
 }
 
-export = class SecureCallback {
+class SecureCallback {
 	throwException: Boolean;
 	notFunctionMsg: string;
 	callbackRequiredMsg: string;
@@ -25,12 +25,10 @@ export = class SecureCallback {
 		}
 	}
 
-	respondsuccess(callback: Function, successMsg: string = null, ...args) {
-		this.respond(callback, null, successMsg, args);
-	}
-
-	responderror(callback: Function, errorMsg: string = null, ...args) {
-		this.respond(callback, errorMsg, args);
+	respondsuccess(callback: Function, ...args) {
+		this.respond(callback, null, args);
 	}
 }
+
+export = SecureCallback;
 
