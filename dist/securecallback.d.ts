@@ -6,7 +6,7 @@
  *~ is the exported object from the file
  */
 
-export = SecureCallback
+export = SC.SecureCallback
 
 module SC {
     declare class SecureCallback {
