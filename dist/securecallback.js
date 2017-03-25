@@ -1,3 +1,4 @@
+"use strict";
 function isFunction(object) {
     return typeof (object) === 'function';
 }
@@ -45,3 +46,4 @@ var SecureCallback = (function () {
     };
     return SecureCallback;
 }());
+module.exports = SecureCallback;

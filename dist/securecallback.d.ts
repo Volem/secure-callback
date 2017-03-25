@@ -5,8 +5,6 @@
 /*~ This declaration specifies that the class constructor function
  *~ is the exported object from the file
  */
-export = SecureCallback;
-
 export module SecureCallback {
     declare class SecureCallback {
         constructor(throwException?: Boolean, notFunctionMsg?: string, callbackRequiredMsg?: string);

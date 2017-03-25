@@ -34,3 +34,5 @@ class SecureCallback {
 	}
 }
 
+export = SecureCallback;
+
