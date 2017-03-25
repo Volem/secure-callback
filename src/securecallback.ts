@@ -16,7 +16,7 @@ class SecureCallback {
 	respond(callback: Function, ...args) {
 		if (callback) {
 			if (isFunction(callback)) {
-				callback.apply(this, args);
+				callback(...args);
 			} else if (this.throwException) {
 				throw new Error(this.notFunctionMsg);
 			}
