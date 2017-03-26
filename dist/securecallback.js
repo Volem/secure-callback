@@ -28,12 +28,12 @@ var SecureCallback = (function () {
             throw new Error(this.callbackRequiredMsg);
         }
     };
-    SecureCallback.prototype.respondsuccess = function (callback) {
+    SecureCallback.prototype.respondSuccess = function (callback) {
         var args = [];
         for (var _i = 1; _i < arguments.length; _i++) {
             args[_i - 1] = arguments[_i];
         }
-        this.respond(callback, null, args);
+        this.respond.apply(this, [callback, null].concat(args));
     };
     return SecureCallback;
 }());

@@ -25,8 +25,8 @@ class SecureCallback {
 		}
 	}
 
-	respondsuccess(callback: Function, ...args) {
-		this.respond(callback, null, args);
+	respondSuccess(callback: Function, ...args) {
+		this.respond.apply(this, [callback, null, ...args]);
 	}
 }
 

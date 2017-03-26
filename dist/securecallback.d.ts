@@ -13,7 +13,7 @@ module SC {
         constructor(throwException?: Boolean, notFunctionMsg?: string, callbackRequiredMsg?: string);
 
         respond(callback: Function, ...args): void;
-        respondsuccess(callback: Function, ...args): void;
+        respondSuccess(callback: Function, ...args): void;
     }
 }
 
