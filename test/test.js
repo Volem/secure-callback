@@ -11,15 +11,6 @@ describe('secureCallback', function () {
 				scDefault.respond(function () {
 					return;
 				}, "arg1", "arg2");
-				scDefault.respondsuccess(function(){
-					return;
-				}, 'success message', 'success message 2');
-				scDefault.responderror(function(){
-					return;
-				});
-				scDefault.respondsuccess(function(){
-					return;
-				});
 			}, Error)
 		});
 	});
